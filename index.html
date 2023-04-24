@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
+    />
+    <title>Form</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <h2>Criar uma conta</h2>
+      </div>
+
+      <form action="" id="form" class="form">
+        <div class="form-control">
+          
+          <label for="username">Nome de usuário</label>
+          <ion-icon name="checkmark-circle-outline" class="checkmark-circle-outline"></ion-icon>
+          <ion-icon name="close-circle-outline" class="close-circle-outline"></ion-icon>
+          <input type="text" id="username" placeholder="Digite seu nome de usuário..."
+          />
+          <small class="small">Menssagem de erro</small>
+        </div>
+
+        <div class="form-control">
+
+          <label for="email">Email</label>
+          <ion-icon name="checkmark-circle-outline" class="checkmark-circle-outline"></ion-icon>
+          <ion-icon name="close-circle-outline" class="close-circle-outline"></ion-icon>
+          <input type="text" id="email" placeholder="Digite seu email.."/>
+          <small class="small">Menssagem de erro</small>
+        </div>
+
+        <div class="form-control">
+
+          <label for="password">Senha</label>
+          <ion-icon name="checkmark-circle-outline" class="checkmark-circle-outline"></ion-icon>
+          <ion-icon name="close-circle-outline" class="close-circle-outline"></ion-icon>
+          <input type="password" id="password" placeholder="Digite sua senha"/>
+          <small class="small">Menssagem de erro</small>
+        </div>
+
+        <div class="form-control">
+
+          <label for="password-confirmation">Confirmação de senha</label>
+          <ion-icon name="checkmark-circle-outline" class="checkmark-circle-outline"></ion-icon>
+          <ion-icon name="close-circle-outline" class="close-circle-outline"></ion-icon>
+          <input type="password" id="password-confirmation" placeholder="Digite sua senha novamente"/>
+          <small class="small">Menssagem de erro</small>
+
+        </div>
+
+        <button type="submit" id="button">Enviar</button>
+      </form>
+    </div>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

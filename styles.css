@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(90deg, #00dbde, #fc00ff);
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content:  center;
+}
+
+.container {
+  border-radius: 1.2rem;
+  background-color: #fff;
+  height: 58rem;
+  overflow: hidden;
+  max-width: 41rem;
+}
+
+.header {
+  padding: 0.1rem;
+  padding-left: 2.5rem;
+  background-color: #eee;
+  width: 100%;
+}
+
+.header h2 {
+  font-size: 2.3rem;
+}
+
+.form {
+  background-color: #f8f8f8;
+  padding: 1.3rem 2.3rem;
+  margin: 0 auto;
+}
+
+.form-control {
+  position: relative;
+  margin-bottom: 0.7rem;
+  padding: 0.7rem 0;
+}
+
+.form-control label {
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.form-control input {
+  border: 2px solid #f0f0f0;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 100%;
+  padding: 1.2rem;
+}
+
+.form button {
+  padding: 1.4rem;
+  width: 100%;
+  margin-top: 0.1rem;
+  background-color: #0077ff;
+  border: none;
+  border-radius: 1.2rem;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.form button:hover {
+  background-color:  #bb04f3;
+  transition: 100ms all ease-out;
+}
+
+.checkmark-circle-outline {
+  font-size: 1.6rem;
+  color: green;
+  display: none;
+}
+
+.close-circle-outline {
+  font-size: 1.6rem;
+  color: red;
+  display: none;
+}
+
+.small {
+  color: red;
+  font-size: 1rem;
+  visibility: hidden;
+}
+
+.form-control.sucess .checkmark-circle-outline {
+ display: inline-block;
+}
+
+.form-control.error .close-circle-outline {
+  display: inline-block;
+}
+
+.form-control.error .small {
+  visibility: visible;
+}
+
+.form-control.sucess input {
+  border-color: green;
+}
+
+.form-control.error input {
+  border-color: red;
+}
+
+
+
+/* .form-control input {
+  border-color: red;
+} */
+
+/* @media (max-width: 25rem) {
+  .container {
+    margin: 4rem auto;
+  }
+  
+} */
+

@@ -9,8 +9,13 @@ const form = document.getElementById('form')
 form.addEventListener('submit', (event) => {
   event.preventDefault()
 
-  validations()
-  // postData()
+  
+  if (validations()) {
+    postData()
+    console.log('Requisição será enviada para o servidor')
+  } else {
+    console.log('Formulário incompleto')
+  }
 })
 
 function validations() {
@@ -56,6 +61,23 @@ function validations() {
     setSucess(userPasswordConfirmation)
     console.log(`Confirmação de senha ${userPasswordConfirmationValue} correta`)
   }
+
+  const formControl = document.querySelectorAll('.form-control')
+  const invalided = []
+  let isValid = true
+  formControl.forEach(element => { 
+    const contem = element.className === 'form-control sucess'
+    invalided.push(contem)
+  })
+  invalided.forEach(valor => {
+    if (valor === false) {
+      isValid = false
+    }
+  })
+  
+  // console.log(formControl)
+  // console.log(isValid)
+  return isValid
 }
 
 function setSucess(input) {
@@ -83,6 +105,7 @@ async function postData() {
       body: formData
     })
     const data = await response.json()
+    console.log(response)
     console.log(data)
 
 

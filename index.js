@@ -10,6 +10,7 @@ form.addEventListener('submit', (event) => {
   event.preventDefault()
 
   validations()
+  // postData()
 })
 
 function validations() {
@@ -71,5 +72,27 @@ function setError(input, message) {
   small.innerText = message
   // formControl.classList.add('error')
   formControl.className = 'form-control error'
+}
+
+async function postData() {
+  const formData = new FormData(form)
+
+  try {
+    const response = await fetch('http://localhost:3000/get', {
+      method: "POST",
+      body: formData
+    })
+    const data = await response.json()
+    console.log(data)
+
+
+    if (response.ok) {
+      alert('Formuláro enviado com sucesso')
+    }
+
+  } catch (error) {
+    console.log(`${error.name}: ${error.message}`)
+    alert('Ocorreu um erro ao enviar o formulário')
+  }
 }
 

@@ -100,7 +100,7 @@ async function postData() {
   const formData = new FormData(form)
 
   try {
-    const response = await fetch('http://localhost:3000/get', {
+    const response = await fetch('http://localhost:3000/send', {
       method: "POST",
       body: formData
     })

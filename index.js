@@ -35,6 +35,9 @@ function validations() {
   if (userEmailValue === '') {
     setError(userEmail, 'Email não identificado')
     console.log('Email não identificado')
+  } else if (!checkEmail(userEmailValue)) {
+    setError(userEmail, 'Por favor, insira um email válido')
+    console.log('Email inválido')
   } else {
     setSucess(userEmail)
     console.log(`Email ${userEmailValue} correto`)
@@ -94,6 +97,11 @@ function setError(input, message) {
   small.innerText = message
   // formControl.classList.add('error')
   formControl.className = 'form-control error'
+}
+  
+function checkEmail(email) {
+  
+  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)
 }
 
 async function postData() {

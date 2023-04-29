@@ -118,7 +118,33 @@ body {
   border-color: red;
 }
 
+.elementResponse {
+  opacity: 0;
+  position: absolute;
+}
 
+.elementResponse p {
+  opacity: 0;
+}
+
+div.elementResponse.active {
+  position: absolute;
+  z-index: 1;
+  background-color: #cacaca;
+  width: 20rem;
+  border-radius: 1rem;
+  text-align: center;
+  top: 10rem;
+  transition: all 800ms ease-out;
+  opacity: 1;
+}
+
+div.elementResponse.active p {
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  opacity: 1;
+}
 
 /* .form-control input {
   border-color: red;

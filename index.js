@@ -12,8 +12,8 @@ form.addEventListener("submit", event => {
 
   if (validations()) {
     responseElement()
-    clearInputs()
     postData()
+    clearInputs()
     console.log("Requisição será enviada para o servidor")
   } else {
     console.log("Formulário incompleto")
@@ -136,7 +136,7 @@ async function postData() {
       body: formData
     })
     const data = await response.json()
-    console.log(response)
+    // console.log(response)
     console.log(data)
 
     if (response.ok) {

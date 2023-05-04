@@ -131,7 +131,7 @@ async function postData() {
   const formData = new FormData(form)
 
   try {
-    const response = await fetch("http://localhost:3000/send", {
+    const response = await fetch("https://form-back-end.vercel.app/send", {
       method: "POST",
       body: formData
     })
@@ -143,9 +143,9 @@ async function postData() {
       console.log("Formuláro enviado com sucesso")
     }
   } catch (error) {
-    console.log(`${error.name}: ${error.message}`)
+    console.log(error.message)
     alert(
-      `Ocorreu um erro ${error.name}:  ${error.message}, portando o formulário não foi enviado`
+      `Ocorreu um erro ${error.name}:  ${error.message}, formulário não foi enviado`
     )
   }
 }

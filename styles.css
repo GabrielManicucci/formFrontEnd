@@ -39,8 +39,8 @@ body {
 
 .title {
   border: 2px solid #0099ff;
-  width: 10rem;
-  height: 10rem;
+  width: 11rem;
+  height: 11rem;
   border-radius: 50%;
   margin-top: 5rem;
   margin-bottom: 2rem;
@@ -48,8 +48,10 @@ body {
 }
 
 .title img {
-  width: 10rem;
-  height: 10rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* padding-top: 0.2rem; */
 }
 
 .buttons {
@@ -61,11 +63,11 @@ body {
   align-items: center;
   margin-bottom: 2rem;
   padding: 0.3rem;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   border: 1px solid transparent;
   background: #ffffff20;
   border-radius: 1rem;
-  padding-left: 1rem;
+  padding-left: 1.5rem;
 }
 
 .infoButton:hover {
@@ -75,8 +77,8 @@ body {
 }
 
 .buttons .infoButton p {
-  font-size: 1.3rem;
-  margin-left: 1.2rem;
+  font-size: 1.4rem;
+  margin-left: 1.5rem;
 }
 
 .buttons .infoButton a {
@@ -97,11 +99,11 @@ body {
   border: 1px solid transparent;
   background: #ffffff20;
   border-radius: 1rem;
-  padding-left: 1rem;
+  padding-left: 1.5rem;
 }
 
 #mobileButton p {
-  margin-left: 1.2rem;
+  margin-left: 1.5rem;
 }
 
 #mobileButton:hover {

@@ -16,53 +16,82 @@
     <div class="elementResponse" id="elementResponse">
       <p>Email enviado com sucesso, acesse seu email</p>
     </div>
-    <div class="container">
-      <div class="header">
-        <h2>Entrar em contato</h2>
+    <div class="mainContainer">
+      <div class="contactInfo" id="contactInfo">
+        <div class="title">
+          <img src="./assets/perfil-image.PGN.jpg" alt="perfil-image">
+        </div>
+
+        <div class="buttons">
+          <div class="infoButton">
+            <ion-icon name="person"></ion-icon>
+            <p>Gabriel Manicucci - Programador Frontend Júnior</p>
+          </div>
+          <div class="infoButton">
+            <a href="https:wa.me/5562999390620">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+              <p>WhatsApp</p>
+            </a>
+          </div>
+          <div class="infoButton">
+            <a href="https://www.github.com/GabrielManicucci">
+              <ion-icon name="code-slash"></ion-icon>
+              <p>Github</p>
+            </a>
+          </div>
+          <div class="infoButton">
+            <a href="https://www.linkedin.com/in/gabriel-manicucci/">
+              <ion-icon name="person-circle"></ion-icon>
+              <p>Linkedin</p>
+            </a>
+          </div>
+          <button class="infoButton" id="mobileButton">
+              <ion-icon name="mail"></ion-icon>
+              <p>Entre em contato por email</p>
+          </button>
+        </div>
       </div>
-
-      <form action="" id="form" class="form">
-        <div class="form-control">
-          
-          <label for="username">Nome de usuário</label>
-          <ion-icon name="checkmark-circle-outline" class="checkmark-circle-outline"></ion-icon>
-          <ion-icon name="close-circle-outline" class="close-circle-outline"></ion-icon>
-          <input type="text" id="username" placeholder="Digite seu nome de usuário..."
-          name="nome"/>
-          <small class="small">Menssagem de erro</small>
+      <div class="container inactive" id="formContainer">
+        <div class="header">
+          <h2>Entrar em contato</h2>
+          <button id="closeForm">
+            <ion-icon name="close"></ion-icon>
+          </button>
         </div>
+  
+        <form action="" id="form" class="form">
+          <div class="form-control">
+            
+            <label for="username">Nome de usuário</label>
+            <ion-icon name="checkmark-circle-outline" class="checkmark-circle-outline"></ion-icon>
+            <ion-icon name="close-circle-outline" class="close-circle-outline"></ion-icon>
+            <input type="text" id="username" placeholder="Digite seu nome de usuário..."
+            name="nome"/>
+            <small class="small">Menssagem de erro</small>
+          </div>
+  
+          <div class="form-control">
+  
+            <label for="email">Email</label>
+            <ion-icon name="checkmark-circle-outline" class="checkmark-circle-outline"></ion-icon>
+            <ion-icon name="close-circle-outline" class="close-circle-outline"></ion-icon>
+            <input type="text" id="email" placeholder="Digite seu email.." name="email"/>
+            <small class="small">Menssagem de erro</small>
+          </div>
 
-        <div class="form-control">
-
-          <label for="email">Email</label>
-          <ion-icon name="checkmark-circle-outline" class="checkmark-circle-outline"></ion-icon>
-          <ion-icon name="close-circle-outline" class="close-circle-outline"></ion-icon>
-          <input type="text" id="email" placeholder="Digite seu email.." name="email"/>
-          <small class="small">Menssagem de erro</small>
-        </div>
-
-        <div class="form-control">
-
-          <label for="password">Senha</label>
-          <ion-icon name="checkmark-circle-outline" class="checkmark-circle-outline"></ion-icon>
-          <ion-icon name="close-circle-outline" class="close-circle-outline"></ion-icon>
-          <input type="password" id="password" placeholder="Digite sua senha" name="senha"/>
-          <small class="small">Menssagem de erro</small>
-        </div>
-
-        <div class="form-control">
-
-          <label for="password-confirmation">Confirmação de senha</label>
-          <ion-icon name="checkmark-circle-outline" class="checkmark-circle-outline"></ion-icon>
-          <ion-icon name="close-circle-outline" class="close-circle-outline"></ion-icon>
-          <input type="password" id="password-confirmation" placeholder="Digite sua senha novamente"/>
-          <small class="small">Menssagem de erro</small>
-
-        </div>
-
-        <button type="submit" id="button">Enviar</button>
-      </form>
+          <div id="form-control-text" class="form-control">
+  
+            <label for="textarea">Menssagem</label>
+            <ion-icon name="checkmark-circle-outline" class="checkmark-circle-outline"></ion-icon>
+            <ion-icon name="close-circle-outline" class="close-circle-outline"></ion-icon>
+            <textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="Envie sua mensagem..."></textarea>
+            <small class="small">Menssagem de erro</small>
+          </div>
+          <button type="submit" id="button">Enviar</button>
+        </form>
+      </div>
     </div>
+    
 
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

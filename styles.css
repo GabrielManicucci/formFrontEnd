@@ -9,7 +9,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(90deg, #00dbde, #fc00ff);
+  background: linear-gradient(90deg, #0084ff, #ff0055);
   width: 100vw;
   height: 100vh;
   font-family: 'Poppins', sans-serif;
@@ -19,23 +19,142 @@ body {
   justify-content:  center;
 }
 
+.mainContainer {
+  display: flex;
+  border: 0.1rem solid #eee;
+  border-radius: 1.2rem;
+  overflow: hidden;
+}
+
+.contactInfo {
+  width: 37rem;
+  height: 58rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  background: #ffffff09;
+  backdrop-filter: blur(60px);
+}
+
+.title {
+  border: 2px solid #0099ff;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.title img {
+  width: 10rem;
+  height: 10rem;
+}
+
+.buttons {
+  width: 85%;
+}
+
+.infoButton {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 0.3rem;
+  font-size: 1.4rem;
+  border: 1px solid transparent;
+  background: #ffffff20;
+  border-radius: 1rem;
+  padding-left: 1rem;
+}
+
+.infoButton:hover {
+  background: transparent;
+  transition: 200ms;
+  border-color: #eeeeee8f;
+}
+
+.buttons .infoButton p {
+  font-size: 1.3rem;
+  margin-left: 1.2rem;
+}
+
+.buttons .infoButton a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: #fff;
+  text-decoration: none;
+}
+
+#mobileButton {
+  display: flex;
+  width: 100%;
+  color: #eee;
+  align-items: center;
+  padding: 0.7rem;
+  font-size: 1.4rem;
+  border: 1px solid transparent;
+  background: #ffffff20;
+  border-radius: 1rem;
+  padding-left: 1rem;
+}
+
+#mobileButton p {
+  margin-left: 1.2rem;
+}
+
+#mobileButton:hover {
+  background: transparent;
+  transition: 200ms;
+  border-color: #eeeeee8f;
+  cursor: pointer;
+}
+
 .container {
+  display: flex;
+  flex-direction: column;
   border-radius: 1.2rem;
   background-color: #fff;
   height: 58rem;
   overflow: hidden;
-  max-width: 41rem;
+  max-width: 39rem;
+  animation-name: starting;
+  animation-duration: .7s;
+  transform: translate(-30rem);
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+@keyframes starting {
+  to {
+    transform: translate(0rem);
+    opacity: 1;
+  }
 }
 
 .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 0.1rem;
-  padding-left: 2.5rem;
+  padding: 0 2.5rem;
   background-color: #eee;
   width: 100%;
 }
 
 .header h2 {
   font-size: 2.3rem;
+}
+
+#closeForm {
+  border: none;
+  font-size: 3rem;
+  margin-top: 0.8rem;
+}
+
+#closeForm:hover {
+  cursor: pointer;
 }
 
 .form {
@@ -46,20 +165,41 @@ body {
 
 .form-control {
   position: relative;
-  margin-bottom: 0.7rem;
-  padding: 0.7rem 0;
+  margin-bottom: 0.3rem;
+  padding: 0.5rem 0;
+}
+
+#form-control-text {
+  position: relative;
+  margin-bottom: 0.3rem;
+  padding: 0.5rem 0;
+}
+
+#form-control-text label {
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-bottom: 0.4rem;
 }
 
 .form-control label {
   display: inline-block;
   font-size: 1.5rem;
   margin-bottom: 0.4rem;
+  border: none;
 }
 
 .form-control input {
   border: 2px solid #f0f0f0;
   border-radius: 1rem;
   padding: 1rem;
+  width: 100%;
+  padding: 1.2rem;
+}
+
+#form-control-text textarea {
+  border-radius: 1rem;
+  border: 2px solid #f0f0f0;
+  resize: none;
   width: 100%;
   padding: 1.2rem;
 }
@@ -77,7 +217,8 @@ body {
 
 .form button:hover {
   background-color:  #bb04f3;
-  transition: 100ms all ease-out;
+  transition: 100ms;
+  cursor: pointer;
 }
 
 .checkmark-circle-outline {
@@ -114,7 +255,15 @@ body {
   border-color: green;
 }
 
+.form-control.sucess #textarea {
+  border-color: green;
+}
+
 .form-control.error input {
+  border-color: red;
+}
+
+.form-control.error #textarea {
   border-color: red;
 }
 
@@ -146,14 +295,27 @@ div.elementResponse.active p {
   opacity: 1;
 }
 
-/* .form-control input {
-  border-color: red;
-} */
+.inactive {
+  display: none;
+}
 
-/* @media (max-width: 25rem) {
-  .container {
-    margin: 4rem auto;
+@media (max-width: 700px) {
+
+  .mainContainer {
+    border: none;
   }
-  
-} */
+
+  .info {
+    width: 75%;
+  }
+
+  .contactInfo {
+    height: 58rem;
+    overflow: hidden;
+    width: 40rem;
+    background-color: transparent;
+    background: none;
+    backdrop-filter: none;
+  }
+}
 

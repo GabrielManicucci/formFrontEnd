@@ -12,6 +12,7 @@ const formContainer = document.getElementById("formContainer")
 const contactInfoContainer = document.getElementById('contactInfo')
 const contactMobileButton = document.getElementById('mobileButton')
 const closeButon = document.getElementById('closeForm')
+const formControl = document.querySelectorAll('.form-control')
 
 contactMobileButton.addEventListener('click', () => {
   const screenWidth = screen.width
@@ -31,6 +32,10 @@ closeButon.addEventListener('click', () => {
   formContainer.classList.add('inactive')
   contactInfoContainer.classList.remove('inactive')
   elementResponse.classList.add('inactive')
+  
+  formControl.forEach( (element) => {
+    element.className = "form-control"
+  } )
 })
 
 form.addEventListener("submit", event => {
@@ -50,8 +55,6 @@ function validations() {
   const userNameValue = userName.value
   const userEmailValue = userEmail.value
   const userTextareaValue = userTextarea.value
-  // const userPasswordValue = userPassword.value
-  // const userPasswordConfirmationValue = userPasswordConfirmation.value
 
   if (userNameValue === "") {
     setError(userName, "Nome de usário não identificado")
@@ -80,36 +83,6 @@ function validations() {
     console.log('Input textarea preenchido')
   }
 
-  // if (userPasswordValue === "") {
-  //   setError(userPassword, "Senha do usuário não identificada")
-  //   console.log("Senha do usuário não identificada")
-  // } else if (userPasswordValue.length < 7) {
-  //   setError(userPassword, "A senha deve conter no mínimo 7 digitos")
-  //   console.log("A senha deve conter no mínimo 7 digitos")
-  // } else {
-  //   setSucess(userPassword)
-  //   console.log(`Senha ${userPasswordValue} correto`)
-  // }
-
-  // if (userPasswordConfirmationValue === "") {
-  //   setError(
-  //     userPasswordConfirmation,
-  //     "Confirmação de senha deve ser igual a senha"
-  //   )
-  //   console.log("Campo de confirmação de senha em branco")
-  // } else if (userPasswordConfirmationValue !== userPasswordValue) {
-  //   setError(
-  //     userPasswordConfirmation,
-  //     "Confirmação de senha deve ser igual a senha"
-  //   )
-  //   console.log(
-  //     `Confirmação de senha ${userPasswordConfirmationValue} deve ser igual a senha`
-  //   )
-  // } else {
-  //   setSucess(userPasswordConfirmation)
-  //   console.log(`Confirmação de senha ${userPasswordConfirmationValue} correta`)
-  // }
-
   const formControl = document.querySelectorAll(".form-control")
   const invalided = []
   let isValid = true
@@ -122,17 +95,14 @@ function validations() {
       isValid = false
     }
   })
-
-  // console.log(formControl)
-  // console.log(isValid)
+  
   return isValid
 }
 
 function setSucess(input) {
   const formControl = input.parentElement
 
-  // formControl.classList.add('sucess')
-  formControl.className = "form-control sucess"
+  formControl.classList.add('sucess')
 }
 
 function setError(input, message) {
@@ -141,7 +111,6 @@ function setError(input, message) {
 
   small.innerText = message
   formControl.classList.add('error')
-  // formControl.className = "form-control error"
 }
 
 function checkEmail(email) {

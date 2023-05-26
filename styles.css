@@ -19,6 +19,35 @@ body {
   justify-content:  center;
 }
 
+.elementResponse {
+  opacity: 0;
+  position: absolute;
+  top: 100px;
+}
+
+.elementResponse p {
+  opacity: 0;
+}
+
+div.elementResponse.active {
+  position: absolute;
+  z-index: 1;
+  background-color: #cacaca;
+  width: 20rem;
+  border-radius: 1rem;
+  text-align: center;
+  top: 10rem;
+  transition: all 800ms ease-out;
+  opacity: 1;
+}
+
+div.elementResponse.active p {
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  opacity: 1;
+}
+
 .mainContainer {
   display: flex;
   border: 0.1rem solid #eee;
@@ -136,7 +165,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.1rem;
+  /* padding: 0.1rem; */
   padding: 0 2.5rem;
   background-color: #eee;
   width: 100%;
@@ -158,7 +187,7 @@ body {
 
 .form {
   background-color: #f8f8f8;
-  padding: 1.3rem 2.3rem;
+  padding: 1.6rem 2.3rem;
   margin: 0 auto;
 }
 
@@ -191,6 +220,7 @@ body {
   padding: 1rem;
   width: 100%;
   padding: 1.2rem;
+  margin-bottom: 0.2rem;
 }
 
 #form-control-text textarea {
@@ -199,6 +229,7 @@ body {
   resize: none;
   width: 100%;
   padding: 1.2rem;
+  margin-bottom: -0.2rem;
 }
 
 .form button {
@@ -264,34 +295,7 @@ body {
   border-color: red;
 }
 
-.elementResponse {
-  opacity: 0;
-  position: absolute;
-  top: 100px;
-}
 
-.elementResponse p {
-  opacity: 0;
-}
-
-div.elementResponse.active {
-  position: absolute;
-  z-index: 1;
-  background-color: #cacaca;
-  width: 20rem;
-  border-radius: 1rem;
-  text-align: center;
-  top: 10rem;
-  transition: all 800ms ease-out;
-  opacity: 1;
-}
-
-div.elementResponse.active p {
-  font-size: 1.3rem;
-  font-weight: 600;
-  padding: 0.5rem 1rem;
-  opacity: 1;
-}
 
 .inactive {
   display: none;
@@ -314,6 +318,42 @@ div.elementResponse.active p {
     background-color: transparent;
     background: none;
     backdrop-filter: none;
+  }
+
+  .container {
+    height: 54rem;
+  }
+
+  .form-control {
+    padding: 0 0;
+  }
+
+  /* .header {
+
+  } */
+
+  .header h2 {
+    font-size: 2rem;
+  }
+
+  #form-control-text label {
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+  }
+
+  #form-control-text textarea {
+    margin-bottom: -0.5rem;
+  }
+
+  .form-control label {
+    display: inline-block;
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+    border: none;
+  }
+
+  .small {
+    font-size: 0.7rem;
   }
 }
 

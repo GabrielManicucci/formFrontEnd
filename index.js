@@ -30,6 +30,7 @@ contactMobileButton.addEventListener('click', () => {
 closeButon.addEventListener('click', () => {
   formContainer.classList.add('inactive')
   contactInfoContainer.classList.remove('inactive')
+  elementResponse.classList.add('inactive')
 })
 
 form.addEventListener("submit", event => {
@@ -150,8 +151,8 @@ function checkEmail(email) {
 }
 
 function responseElement() {
+  elementResponse.classList.remove('inactive')
   elementResponse.classList.add("active")
-  // console.log('teste')
 }
 
 function clearInputs() {
@@ -166,7 +167,7 @@ async function postData() {
   const formData = new FormData(form)
 
   try {
-    const response = await fetch("https://form-back-end.vercel.app/send", {
+    const response = await fetch("https://form-back-end.vercel.app/get", {
       method: "POST",
       body: formData
     })
